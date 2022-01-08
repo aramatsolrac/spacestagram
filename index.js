@@ -2,23 +2,29 @@ const spaceData = document.getElementById("spaceData");
 
 async function getImages() {
     // TODO: gif loading spaceData.innerHTML = null
+    spaceData.innerHTML =
+        `<div class="loader">
+            <div class="sun"></div>
+            <div class="orbit orbit1"><div class="planetX planet1"></div></div>
+            <div class="orbit orbit2"><div class="planetX planet2"></div></div>
+            <div class="orbit orbit3"><div class="planetX planet3"></div></div>
+        </div>`
     const source = await (await fetch(`https://api.nasa.gov/planetary/apod?api_key=OCbAbDXICtYgGu3b2fbgmqZFJ4eP1Vff6GgQzq38&count=10`)).json();
-    spaceData.innerHTML = null
+
     source.map(function(d) {
-        spaceData.innerHTML += `
-            <div class="spaceData__container" id="spaceData__container">
-                <img id="pic" src="${d.hdurl}" alt="NASA Picture Of The Day"/>
+        spaceData.innerHTML +=
+            `<div class="spaceData__container" id="spaceData__container">
+                <img class="spaceData__container__img"id="pic" src="${d.hdurl}" alt="NASA Picture Of The Day"/>
                 <div class="card_details">
                     <div>
                         <p>${d.title}</p>
-                        <p>Date: ${d.date}</p>
+                        <p>${d.date}</p>
                     </div>
                     <button class="btn-like" onclick="clickLikeBtn(this)">
                         <i class="fas fa-heart" id="icon-like"></i>
                     </button>
                 <div>
-            </div>
-            `
+            </div>`
     })
 };
 
