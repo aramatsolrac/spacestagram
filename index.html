@@ -8,35 +8,42 @@
     <title>Spacestagram</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/19dc0097e6.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="responsive.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&family=Source+Sans+Pro:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/responsive.css">
+    <link rel="stylesheet" href="./style/loading-page.css">
+    <link rel="stylesheet" href="./style/index.css">
 </head>
 
 <body id="body">
     <header class="header" id="header">
-        <h1 id="h1">Spacestagram</h1>
-
+        <div>
+            <h1 id="h1"><img src="./images/solar-system.svg">Spacestagram</h1>
+        </div>
         <!-- mobile -->
         <div class="header__mobile" id="search-mobile">
-            <div class="header__mobile__search__input icon-inside">
-                <span>
-                    <input type="date" id="mobile-input-date" style="display: none;" aria-label="Search">
-                    <i id="close-icon" class="fas fa-times" style="display: none;" aria-hidden="true"></i>
-                </span>
-                <button style="display: none;" id="search-btn">Search</button>
-
+            <div class="header__mobile__search__input">
+                <div>
+                    <input type="date" id="mobile-input-date" style="display: none; width:15rem;" aria-label="Search" class="input">
+                </div>
+                <div>
+                    <button style="display: none;" id="search-btn" class="btn"><i class="fas fa-search" aria-hidden="true"></i></button>
+                </div>
+                <div>
+                    <button style="display: none;" id="close-icon" class="btn"><i  class="fas fa-times" aria-hidden="true"></i></button>
+                </div>
+                <button id="calendar-icon" class="btn"><i class="fas fa-calendar-alt" aria-hidden="true"></i></button>
             </div>
-            <button id="calendar-icon" class="btn-search">
-                    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            </button>
         </div>
         <!-- -->
 
         <input type="checkbox" class="toggle" id="toggle">
-        <label for="toggle" id="label"></label>
+        <label for="toggle" id="label"></i></label>
 
     </header>
+
 
     <div id="spaceData" class="spaceData">
         <!-- Populated via js -->

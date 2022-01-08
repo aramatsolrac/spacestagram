@@ -1,0 +1,182 @@
+html {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.header {
+    margin: 0 .75rem;
+    /* min-height: 1vh; */
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    width: 100%;
+    /* background: linear-gradient(45deg,#aad1b6 , #b5caf9, #c7b9ff, #f0b9dd, #f3bf99, #fffad1); */
+    background: linear-gradient(45deg, #fffad1, #f3bf99, #f0b9dd, #c7b9ff, #b5caf9, #aad1b6);
+}
+
+h1 {
+    display: flex;
+    padding: .75rem;
+    font-size: 1.3rem;
+    color:
+}
+
+header img {
+    width: 30px;
+    height: 30px;
+    margin: 2px 4px 0 4px;
+}
+
+.toggle {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    margin-left: auto;
+    /* background-color: pink; */
+}
+
+label {
+    width: 50px;
+    height: 30px;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    margin: .75rem;
+    background-color: white;
+}
+
+label::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 23px;
+    border-radius: 50%;
+    top: 3px;
+    left: 22px;
+    transition: .5s;
+    background-color: #f3bf99;
+}
+
+.toggle:checked+label::after {
+    transform: translate(-18px);
+    background-color: black;
+}
+
+.btn {
+    display: flex;
+    border: none;
+    border-radius: .5rem;
+    padding: .60rem;
+    background-color: inherit;
+}
+
+.input {
+    border: none;
+    border-radius: .5rem;
+    padding: .30rem;
+    background-color: whitesmoke;
+}
+
+.header__mobile {
+    display: flex;
+}
+
+.header__mobile__search__input {
+    display: flex;
+}
+
+#mobile-input-date {
+    /* width: 15rem; */
+    margin: 1rem 0 1rem 1rem;
+}
+
+#search-btn {
+    margin: 1rem 0 1rem 0;
+}
+
+#close-icon {
+    margin: 1rem;
+}
+
+.spaceData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+}
+
+.spaceData__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: .75rem 0;
+    width: 100%;
+    background-color: white;
+    border-radius: .50rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.card_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    width: 100%;
+}
+
+.card_details * {
+    margin: .3rem;
+}
+
+.spaceData__container__img {
+    min-height: 200px;
+    max-height: 400px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: .50rem .50rem 0 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+
+/* btn like */
+
+.btn-like {
+    background-color: white;
+    border: 0.5px solid lightslategrey;
+    color: grey;
+    font-size: 1rem;
+    border-radius: .5rem;
+    padding: .3rem;
+    width: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.btn-liked {
+    background-color: whitesmoke;
+    color: red;
+    font-size: 1rem;
+    border-radius: .5rem;
+    padding: .3rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+
+/* change theme */
+
+.dark {
+    background-color: black;
+}
+
+.grey {
+    background-color: white;
+}
