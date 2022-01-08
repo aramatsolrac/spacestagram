@@ -4,14 +4,14 @@
     background-color: white;
     height: 100%;
     width: 100%;
-    margin-bottom: 200px;
+    margin-bottom: 12.5rem;
     position: fixed;
 }
 
 .sun {
     background: radial-gradient(#ff0, #f90);
-    height: 50px;
-    width: 50px;
+    height: 3.125rem;
+    width: 3.125rem;
     border-radius: 50%;
     position: absolute;
     left: 0;
@@ -21,40 +21,40 @@
     margin: auto;
 }
 
-.planetX {
+.planet {
     position: absolute;
     z-index: 100;
     border-radius: 50%;
 }
 
-.planet1 {
-    left: 20px;
-    height: 13px;
-    width: 13px;
+.planetA {
+    left: 1.25rem;
+    height: 0.813rem;
+    width: 0.813rem;
     background-color: #ff8;
-    border: .5px solid grey;
+    border: 0.031rem solid grey;
 }
 
-.planet2 {
-    left: 23px;
-    height: 20px;
-    width: 20px;
+.planetB {
+    left: 1.438rem;
+    height: 1.25rem;
+    width: 1.25rem;
     background: linear-gradient(#00ff00, #09f, #09f);
     -webkit-animation: rotation 1s infinite linear;
     animation: rotation 1s infinite linear;
 }
 
-.planet3 {
-    left: 49px;
-    height: 17px;
-    width: 17px;
+.planetC {
+    left: 3.063rem;
+    height: 1.063rem;
+    width: 1.063rem;
     background: radial-gradient(#ff9900, #ff4400);
 }
 
 .orbit {
     background: transparent;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 0.063rem solid black;
     position: absolute;
     left: 0;
     right: 0;
@@ -63,25 +63,25 @@
     margin: auto;
 }
 
-.orbit1 {
-    height: 100px;
-    width: 100px;
+.orbitA {
+    height: 6.25rem;
+    width: 6.25rem;
     -webkit-animation: rotation 2s infinite linear;
     -moz-animation: rotation 2s infinite linear;
     animation: rotation 2s infinite linear;
 }
 
-.orbit2 {
-    height: 150px;
-    width: 150px;
+.orbitB {
+    height: 9.375rem;
+    width: 9.375rem;
     -webkit-animation: rotation 3s infinite linear;
     -moz-animation: rotation 3s infinite linear;
     animation: rotation 3s infinite linear;
 }
 
-.orbit3 {
-    height: 200px;
-    width: 200px;
+.orbitC {
+    height: 12.5rem;
+    width: 12.5rem;
     -moz-animation: rotation 6s infinite linear;
     -webkit-animation: rotation 6s infinite linear;
     animation: rotation 6s infinite linear;

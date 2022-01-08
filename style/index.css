@@ -12,13 +12,10 @@ body {
 }
 
 .header {
-    margin: 0 .75rem;
-    /* min-height: 1vh; */
     display: flex;
-    /* justify-content: space-around; */
     align-items: center;
+    margin: 0 .75rem;
     width: 100%;
-    /* background: linear-gradient(45deg,#aad1b6 , #b5caf9, #c7b9ff, #f0b9dd, #f3bf99, #fffad1); */
     background: linear-gradient(45deg, #fffad1, #f3bf99, #f0b9dd, #c7b9ff, #b5caf9, #aad1b6);
 }
 
@@ -26,7 +23,6 @@ h1 {
     display: flex;
     padding: .75rem;
     font-size: 1.3rem;
-    color:
 }
 
 header img {
@@ -72,16 +68,16 @@ label::after {
 
 .btn {
     display: flex;
+    padding: .60rem;
     border: none;
     border-radius: .5rem;
-    padding: .60rem;
     background-color: inherit;
 }
 
 .input {
+    padding: .30rem;
     border: none;
     border-radius: .5rem;
-    padding: .30rem;
     background-color: whitesmoke;
 }
 
@@ -94,7 +90,6 @@ label::after {
 }
 
 #mobile-input-date {
-    /* width: 15rem; */
     margin: 1rem 0 1rem 1rem;
 }
 
@@ -151,22 +146,22 @@ label::after {
 /* btn like */
 
 .btn-like {
-    background-color: white;
-    border: 0.5px solid lightslategrey;
-    color: grey;
-    font-size: 1rem;
-    border-radius: .5rem;
     padding: .3rem;
     width: 3rem;
+    font-size: 1rem;
+    color: grey;
+    background-color: white;
+    border: 0.5px solid lightslategrey;
+    border-radius: .5rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 .btn-liked {
-    background-color: whitesmoke;
-    color: red;
-    font-size: 1rem;
-    border-radius: .5rem;
     padding: .3rem;
+    font-size: 1rem;
+    color: red;
+    background-color: whitesmoke;
+    border-radius: .5rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 

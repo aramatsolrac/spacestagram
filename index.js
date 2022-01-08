@@ -5,9 +5,9 @@ async function getImages() {
     spaceData.innerHTML =
         `<div class="loader">
             <div class="sun"></div>
-            <div class="orbit orbit1"><div class="planetX planet1"></div></div>
-            <div class="orbit orbit2"><div class="planetX planet2"></div></div>
-            <div class="orbit orbit3"><div class="planetX planet3"></div></div>
+            <div class="orbit orbitA"><div class="planet planetA"></div></div>
+            <div class="orbit orbitB"><div class="planet planetB"></div></div>
+            <div class="orbit orbitC"><div class="planet planetC"></div></div>
         </div>`
     const source = await (await fetch(`https://api.nasa.gov/planetary/apod?api_key=OCbAbDXICtYgGu3b2fbgmqZFJ4eP1Vff6GgQzq38&count=10`)).json();
 
