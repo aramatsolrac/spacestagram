@@ -83,6 +83,10 @@ label::after {
 
 .header__mobile {
     display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .header__mobile__search__input {
@@ -93,12 +97,8 @@ label::after {
     margin: 1rem 0 1rem 1rem;
 }
 
-#search-btn {
-    margin: 1rem 0 1rem 0;
-}
-
 #close-icon {
-    margin: 1rem;
+    margin: 1rem .5rem 1rem .5rem;
 }
 
 .spaceData {

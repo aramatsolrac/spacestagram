@@ -1,7 +1,6 @@
 const spaceData = document.getElementById("spaceData");
 
 async function getImages() {
-    // TODO: gif loading spaceData.innerHTML = null
     spaceData.innerHTML =
         `<div class="loader">
             <div class="sun"></div>
@@ -52,7 +51,6 @@ function changeTheme() {
 const calendarIcon = document.getElementById("calendar-icon");
 const closeIcon = document.getElementById("close-icon");
 const inputDate = document.getElementById("mobile-input-date");
-const searchBtn = document.getElementById("search-btn");
 const label = document.getElementById("label");
 const h1 = document.getElementById("h1");
 
@@ -65,7 +63,6 @@ function mobileSearch() {
     if (!showInput) {
         inputDate.style.display = "flex";
         closeIcon.style.display = "flex";
-        searchBtn.style.display = "flex";
         calendarIcon.style.display = "none";
         label.style.display = "none";
         h1.style.display = "none";
@@ -73,7 +70,6 @@ function mobileSearch() {
     } else {
         inputDate.style.display = "none";
         closeIcon.style.display = "none";
-        searchBtn.style.display = "none";
         calendarIcon.style.display = "flex";
         label.style.display = "flex";
         h1.style.display = "flex";
@@ -84,7 +80,7 @@ function mobileSearch() {
 
 
 
-searchBtn.addEventListener("click", findPic);
+inputDate.addEventListener("change", findPic);
 
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
@@ -95,7 +91,7 @@ today = yyyy + '-' + mm + '-' + dd;
 
 async function findPic() {
 
-    if (today > inputDate.value) {
+    if (today >= inputDate.value) {
         const img = await (await fetch(`https://api.nasa.gov/planetary/apod?api_key=OCbAbDXICtYgGu3b2fbgmqZFJ4eP1Vff6GgQzq38&date=${inputDate.value}`)).json();
         spaceData.innerHTML = `
             <div class="spaceData__container" id="spaceData__container">
