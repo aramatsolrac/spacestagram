@@ -1,5 +1,23 @@
+:root {
+    --source-sans: 'Source Sans Pro', sans-serif;
+    --light: rgb(245, 245, 245);
+    --white: #fff;
+    --whitesmoke: rgb(216, 216, 216);
+    --darker: #000;
+    --dark: #212529;
+    --grey: #343a40;
+    --lightGrey: rgb(128, 128, 128);
+    --orange: #f3bf99;
+    --lightRed: #fdb3b3;
+    --red: rgb(255, 0, 0);
+    --lightPink: #f0b9dd;
+    --gradient: linear-gradient(45deg, #fffad1, #f3bf99, #f0b9dd, #c7b9ff, #b5caf9, #aad1b6);
+    --black-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    --white-shadow: 0 0 6px #fff, rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
 html {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: var(--source-sans);
     font-size: 16px;
 }
 
@@ -8,16 +26,16 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: whitesmoke;
+    background-color: var(--light);
 }
 
-.header {
+header {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 1rem;
     width: 100%;
-    background: linear-gradient(45deg, #fffad1, #f3bf99, #f0b9dd, #c7b9ff, #b5caf9, #aad1b6);
+    background: var(--gradient);
 }
 
 h1 {
@@ -37,7 +55,6 @@ header img {
     width: 0;
     visibility: hidden;
     margin-left: auto;
-    /* background-color: pink; */
 }
 
 label {
@@ -48,7 +65,7 @@ label {
     position: relative;
     cursor: pointer;
     margin: 0 1rem 1.5rem 1rem;
-    background-color: white;
+    background-color: var(--white);
 }
 
 label::after {
@@ -60,12 +77,12 @@ label::after {
     top: 3px;
     left: 22px;
     transition: .5s;
-    background-color: #f3bf99;
+    background-color: var(--orange);
 }
 
 .toggle:checked+label::after {
     transform: translate(-18px);
-    background-color: black;
+    background-color: var(--darker);
 }
 
 .btn {
@@ -75,34 +92,36 @@ label::after {
     border-radius: .5rem;
 }
 
-#calendar-icon {
-    background-color: #f0b9dd;
-}
-
-#close-icon {
-    background-color: #f3a6a6;
-}
-
 .input {
+    display: none;
     padding: .30rem;
+    margin: 1rem 0 1rem 1rem;
     border: none;
     border-radius: .5rem;
-    background-color: whitesmoke;
+    background-color: var(--light);
 }
 
-.header__mobile {
+.close-icon {
+    display: none;
+    margin: 1rem .5rem 1rem .5rem;
+    background-color: var(--lightRed);
+}
+
+button,
+label,
+input {
+    box-shadow: var(--black-shadow);
+}
+
+#calendar-icon {
+    background-color: var(--lightPink);
+}
+
+.search-date {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-}
-
-#mobile-input-date {
-    margin: 1rem 0 1rem 1rem;
-}
-
-#close-icon {
-    margin: 1rem .5rem 1rem .5rem;
 }
 
 .spaceData {
@@ -120,9 +139,9 @@ label::after {
     align-items: center;
     margin: .75rem 0;
     width: 100%;
-    background-color: white;
     border-radius: .50rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    background-color: var(--white);
+    box-shadow: var(--black-shadow);
 }
 
 .card_details {
@@ -143,7 +162,7 @@ label::after {
     width: 100%;
     max-width: 600px;
     border-radius: .50rem .50rem 0 0;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    box-shadow: var(--black-shadow);
 }
 
 
@@ -153,29 +172,56 @@ label::after {
     padding: .3rem;
     width: 3rem;
     font-size: 1rem;
-    color: grey;
-    background-color: white;
-    border: 0.5px solid lightslategrey;
+    color: var(--lightGrey);
+    background-color: var(--white);
+    border: 0.01rem solid var(--whitesmoke);
     border-radius: .5rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    box-shadow: var(--black-shadow);
 }
 
 .btn-liked {
     padding: .3rem;
     font-size: 1rem;
-    color: red;
-    background-color: whitesmoke;
+    color: var(--red);
+    background-color: var(--light);
     border-radius: .5rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    box-shadow: var(--black-shadow);
 }
 
 
-/* change theme */
+/* dark mode */
 
 .dark {
-    background-color: black;
+    background-color: var(--dark);
+}
+
+.dark header {
+    background: var(--grey);
+}
+
+.dark h1,
+.dark h3,
+.dark p {
+    color: var(--light);
+}
+
+.dark #calendar-icon {
+    background-color: var(--light);
+}
+
+.dark button,
+.dark #input-date,
+.dark label {
+    box-shadow: var(--white-shadow);
+}
+
+.dark #close-icon {
+    color: var(--white);
+    background-color: var(--darker);
+    box-shadow: var(--white-shadow);
 }
 
 .grey {
-    background-color: white;
+    background-color: var(--grey);
+    box-shadow: var(--white-shadow);
 }

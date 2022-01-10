@@ -13,14 +13,14 @@ async function getImages() {
     source.map(function(d) {
         spaceData.innerHTML +=
             `<div class="spaceData__container" id="spaceData__container">
-                <img class="spaceData__container__img"id="pic" src="${d.hdurl}" alt="NASA Picture Of The Day"/>
+                <img class="spaceData__container__img" src="${d.hdurl}" alt="Image from NASA Picture Of The Day API"/>
                 <div class="card_details">
                     <div>
-                        <p>${d.title}</p>
+                        <h3>${d.title}</h3>
                         <p>${d.date}</p>
                     </div>
                     <button class="btn-like" onclick="clickLikeBtn(this)">
-                        <i class="fas fa-heart" id="icon-like"></i>
+                        <i class="fas fa-heart" id="icon-like" aria-hidden="true"></i>
                     </button>
                 <div>
             </div>`
@@ -35,31 +35,46 @@ function clickLikeBtn(like) {
 }
 
 
-//changeTheme
+//darkMode
 const toggle = document.getElementById("toggle");
-toggle.addEventListener("click", changeTheme);
+toggle.addEventListener("click", darkMode);
 
-function changeTheme() {
+
+function darkMode() {
     body.classList.toggle("dark");
     for (let i = 0; i < spaceData__container.length; i++) {
         spaceData__container[i].classList.toggle("grey");
     }
 }
 
+
+toggle.addEventListener("click", chngimg);
+
+function chngimg() {
+    const logo = document.getElementById("logo").src;
+    if (logo.indexOf('dark.svg') != -1) {
+        document.getElementById('logo').src = './images/light.svg';
+    } else {
+        document.getElementById('logo').src = './images/dark.svg';
+    }
+}
+
+
 //search
 
 const calendarIcon = document.getElementById("calendar-icon");
 const closeIcon = document.getElementById("close-icon");
-const inputDate = document.getElementById("mobile-input-date");
+const inputDate = document.getElementById("input-date");
 const label = document.getElementById("label");
 const h1 = document.getElementById("h1");
 
 let showInput = false;
 
-calendarIcon.addEventListener("click", mobileSearch);
-closeIcon.addEventListener("click", mobileSearch);
+calendarIcon.addEventListener("click", searchPic);
+closeIcon.addEventListener("click", searchPic);
 
-function mobileSearch() {
+
+function searchPic() {
     if (!showInput) {
         inputDate.style.display = "flex";
         closeIcon.style.display = "flex";
@@ -79,7 +94,6 @@ function mobileSearch() {
 };
 
 
-
 inputDate.addEventListener("change", findPic);
 
 var today = new Date();
@@ -94,18 +108,18 @@ async function findPic() {
     if (today >= inputDate.value) {
         const img = await (await fetch(`https://api.nasa.gov/planetary/apod?api_key=OCbAbDXICtYgGu3b2fbgmqZFJ4eP1Vff6GgQzq38&date=${inputDate.value}`)).json();
         spaceData.innerHTML = `
-            <div class="spaceData__container" id="spaceData__container">
-                <img id="pic" src="${img.hdurl}" alt="NASA Picture Of The Day"/>
-                <div class="card_details">
-                    <div>
-                        <p>${img.title}</p>
-                        <p>Date: ${img.date}</p>
-                    </div>
-                    <button class="btn-like" onclick="clickLikeBtn(this)">
-                        <i class="fas fa-heart" id="icon-like"></i>
-                    </button>
+        <div class="spaceData__container" id="spaceData__container">
+            <img class="spaceData__container__img" src="${img.hdurl}" alt="Image from NASA Picture Of The Day API"/>
+            <div class="card_details">
                 <div>
-            </div>`
+                    <h3>${img.title}</h3>
+                    <p>${img.date}</p>
+                </div>
+                <button class="btn-like" onclick="clickLikeBtn(this)">
+                    <i class="fas fa-heart" id="icon-like" aria-hidden="true"></i>
+                </button>
+            <div>
+        </div>`
     } else {
         alert("Please wait for this image.");
     }

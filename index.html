@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/dark.svg">
     <title>Spacestagram</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/19dc0097e6.js" crossorigin="anonymous"></script>
@@ -18,23 +18,27 @@
 </head>
 
 <body id="body">
-    <header class="header" id="header">
+    <header>
+
         <div>
-            <h1 id="h1"><img src="./images/solar-system.svg">Spacestagram</h1>
+            <h1 id="h1"><img id="logo" src="./images/dark.svg"> Spacestagram</h1>
         </div>
-        <div class="header__mobile" id="search-mobile">
-            <input type="date" id="mobile-input-date" style="display: none;" aria-label="Search" class="input">
-            <button style="display: none;" id="close-icon" class="btn"><i  class="fas fa-times" aria-hidden="true"></i></button>
+
+        <div class="search-date">
+            <input type="date" id="input-date" class="input" aria-label="Search">
+            <button id="close-icon" class="close-icon btn"><i  class="fas fa-times" aria-hidden="true"></i></button>
         </div>
+
         <div>
             <button id="calendar-icon" class="btn"><i class="fas fa-calendar-alt" aria-hidden="true"></i></button>
         </div>
+
         <div>
-            <input type="checkbox" class="toggle" id="toggle">
+            <input type="checkbox" id="toggle" class="toggle">
             <label for="toggle" id="label"></i></label>
         </div>
-    </header>
 
+    </header>
 
     <div id="spaceData" class="spaceData">
         <!-- Populated via js -->
