@@ -14,21 +14,22 @@ body {
 .header {
     display: flex;
     align-items: center;
-    margin: 0 .75rem;
+    justify-content: center;
+    margin: 0 1rem;
     width: 100%;
     background: linear-gradient(45deg, #fffad1, #f3bf99, #f0b9dd, #c7b9ff, #b5caf9, #aad1b6);
 }
 
 h1 {
     display: flex;
-    padding: .75rem;
+    margin: 1rem;
     font-size: 1.3rem;
 }
 
 header img {
     width: 30px;
     height: 30px;
-    margin: 2px 4px 0 4px;
+    margin: 0 5px 5px 0;
 }
 
 .toggle {
@@ -40,12 +41,13 @@ header img {
 }
 
 label {
+    display: flex;
     width: 50px;
     height: 30px;
     border-radius: 15px;
     position: relative;
     cursor: pointer;
-    margin: .75rem;
+    margin: 0 1rem 1.5rem 1rem;
     background-color: white;
 }
 
@@ -71,7 +73,14 @@ label::after {
     padding: .60rem;
     border: none;
     border-radius: .5rem;
-    background-color: inherit;
+}
+
+#calendar-icon {
+    background-color: #f0b9dd;
+}
+
+#close-icon {
+    background-color: #f3a6a6;
 }
 
 .input {
@@ -83,14 +92,9 @@ label::after {
 
 .header__mobile {
     display: flex;
-    /* flex-direction: row; */
     justify-content: center;
     align-items: center;
     width: 100%;
-}
-
-.header__mobile__search__input {
-    display: flex;
 }
 
 #mobile-input-date {
