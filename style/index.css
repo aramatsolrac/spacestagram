@@ -27,13 +27,14 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--light);
+    min-height: 1vh;
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 1rem;
+    /* margin: 0 1rem; */
     width: 100%;
     background: var(--gradient);
 }
