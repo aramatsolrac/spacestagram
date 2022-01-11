@@ -112,6 +112,7 @@ label::after {
     padding: .60rem;
     border: none;
     border-radius: .5rem;
+    color: var(--darker);
 }
 
 .input {
@@ -351,7 +352,6 @@ input {
     background-color: inherit;
     height: 100%;
     width: 100%;
-    margin-top: 37.5rem;
     position: fixed;
 }
 
@@ -458,5 +458,23 @@ input {
     }
     to {
         -moz-transform: rotate(359deg);
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 437px) {
+    .loader {
+        margin-top: 100%;
+    }
+}
+
+@media screen and (min-width: 436px) and (max-width: 1024px) {
+    .loader {
+        margin-top: 80%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .loader {
+        margin-top: 30%
     }
 }

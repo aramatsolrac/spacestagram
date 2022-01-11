@@ -37,6 +37,7 @@ function clickLikeBtn(like) {
 
 //darkMode
 const toggle = document.getElementById("toggle");
+const loader = document.getElementById("loader");
 toggle.addEventListener("click", darkMode);
 
 function darkMode() {
