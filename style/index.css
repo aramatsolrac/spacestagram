@@ -8,12 +8,23 @@
     --grey: #343a40;
     --lightGrey: rgb(128, 128, 128);
     --orange: #f3bf99;
-    --lightRed: #fdb3b3;
-    --red: rgb(255, 0, 0);
-    --lightPink: #f0b9dd;
     --gradient: linear-gradient(45deg, #fffad1, #f3bf99, #f0b9dd, #c7b9ff, #b5caf9, #aad1b6);
     --black-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     --white-shadow: 0 0 6px #fff, rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    /* closeBtn */
+    --closeBtn: #fdb3b3;
+    --closeBtnFocus: #ee7f7f;
+    --closeBtnHover: rgb(241, 102, 102);
+    --closeBtnActive: rgb(235, 82, 82);
+    /* calendarBtn */
+    --calendarBtn: #f0b9dd;
+    --calendarBtnFocus: #f1a7d7;
+    --calendarBtnHover: #f398d3;
+    --calendarBtnActive: #f387cd;
+    /* likeBtn */
+    --likeBtn: rgb(255, 0, 0);
+    /* inputDate */
+    --inputDateFocus: #b5caf9;
 }
 
 html {
@@ -34,7 +45,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin: 0 1rem; */
+    margin: 0 1rem;
     width: 100%;
     background: var(--gradient);
 }
@@ -94,18 +105,46 @@ label::after {
 }
 
 .input {
+    cursor: pointer;
     display: none;
     padding: .30rem;
     margin: 1rem 0 1rem 1rem;
     border: none;
     border-radius: .5rem;
     background-color: var(--light);
+    color: var(--lightGrey);
+    appearance: none;
+    -webkit-appearance: none;
 }
 
-.close-icon {
+.input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--inputDateFocus);
+}
+
+.input:hover {
+    background-color: var(--white);
+}
+
+.close-btn {
+    cursor: pointer;
     display: none;
     margin: 1rem .5rem 1rem .5rem;
-    background-color: var(--lightRed);
+    background-color: var(--closeBtn);
+}
+
+.close-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--closeBtnFocus);
+}
+
+.close-btn:hover {
+    background-color: var(--closeBtnHover);
+}
+
+.close-btn:active {
+    background-color: var(--closeBtnActive);
+    color: var(--white);
 }
 
 button,
@@ -114,8 +153,23 @@ input {
     box-shadow: var(--black-shadow);
 }
 
-#calendar-icon {
-    background-color: var(--lightPink);
+#calendar-btn {
+    cursor: pointer;
+    background-color: var(--calendarBtn);
+}
+
+#calendar-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--calendarBtnFocus);
+}
+
+#calendar-btn:hover {
+    background-color: var(--calendarBtnHover);
+}
+
+#calendar-btn:active {
+    background-color: var(--calendarBtnActive);
+    color: var(--white);
 }
 
 .search-date {
@@ -178,15 +232,34 @@ input {
     border: 0.01rem solid var(--whitesmoke);
     border-radius: .5rem;
     box-shadow: var(--black-shadow);
+    cursor: pointer;
+    transition: .2s;
 }
 
 .btn-liked {
     padding: .3rem;
     font-size: 1rem;
-    color: var(--red);
-    background-color: var(--light);
+    color: var(--likeBtn);
+    background-color: var(--white);
     border-radius: .5rem;
     box-shadow: var(--black-shadow);
+}
+
+.btn-like:focus,
+.btn-liked:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--whitesmoke);
+}
+
+.btn-like:hover,
+.btn-liked:hover {
+    background-color: var(--light);
+}
+
+.btn-like:active,
+.btn-liked:active {
+    background-color: var(--whitesmoke);
+    color: var(--white);
 }
 
 
@@ -206,7 +279,7 @@ input {
     color: var(--light);
 }
 
-.dark #calendar-icon {
+.dark #calendar-btn {
     background-color: var(--light);
 }
 
@@ -216,7 +289,7 @@ input {
     box-shadow: var(--white-shadow);
 }
 
-.dark #close-icon {
+.dark #close-btn {
     color: var(--white);
     background-color: var(--darker);
     box-shadow: var(--white-shadow);

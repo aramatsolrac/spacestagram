@@ -61,30 +61,30 @@ function changeLogo() {
 
 //search
 
-const calendarIcon = document.getElementById("calendar-icon");
-const closeIcon = document.getElementById("close-icon");
+const calendarBtn = document.getElementById("calendar-btn");
+const closeBtn = document.getElementById("close-btn");
 const inputDate = document.getElementById("input-date");
 const label = document.getElementById("label");
 const h1 = document.getElementById("h1");
 
 let showInput = false;
 
-calendarIcon.addEventListener("click", searchPic);
-closeIcon.addEventListener("click", searchPic);
+calendarBtn.addEventListener("click", searchPic);
+closeBtn.addEventListener("click", searchPic);
 
 
 function searchPic() {
     if (!showInput) {
         inputDate.style.display = "flex";
-        closeIcon.style.display = "flex";
-        calendarIcon.style.display = "none";
+        closeBtn.style.display = "flex";
+        calendarBtn.style.display = "none";
         label.style.display = "none";
         h1.style.display = "none";
         showInput = true;
     } else {
         inputDate.style.display = "none";
-        closeIcon.style.display = "none";
-        calendarIcon.style.display = "flex";
+        closeBtn.style.display = "none";
+        calendarBtn.style.display = "flex";
         label.style.display = "flex";
         h1.style.display = "flex";
         showInput = false;
