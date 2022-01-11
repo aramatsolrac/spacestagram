@@ -12,7 +12,7 @@ async function getImages() {
 
     source.map(function(d) {
         spaceData.innerHTML +=
-            `<div class="spaceData__container" id="spaceData__container">
+            `<div class="spaceData__container ${body.classList.contains("dark") ? "grey" : null}" id="spaceData__container">
                 <img class="spaceData__container__img" src="${d.hdurl}" alt="Image from NASA Picture Of The Day API"/>
                 <div class="card_details">
                     <div>
@@ -39,7 +39,6 @@ function clickLikeBtn(like) {
 const toggle = document.getElementById("toggle");
 toggle.addEventListener("click", darkMode);
 
-
 function darkMode() {
     body.classList.toggle("dark");
     for (let i = 0; i < spaceData__container.length; i++) {
@@ -48,9 +47,9 @@ function darkMode() {
 }
 
 
-toggle.addEventListener("click", chngimg);
+toggle.addEventListener("click", changeLogo);
 
-function chngimg() {
+function changeLogo() {
     const logo = document.getElementById("logo").src;
     if (logo.indexOf('dark.svg') != -1) {
         document.getElementById('logo').src = './images/light.svg';
@@ -104,11 +103,10 @@ var yyyy = today.getFullYear();
 today = yyyy + '-' + mm + '-' + dd;
 
 async function findPic() {
-
     if (today >= inputDate.value) {
         const img = await (await fetch(`https://api.nasa.gov/planetary/apod?api_key=OCbAbDXICtYgGu3b2fbgmqZFJ4eP1Vff6GgQzq38&date=${inputDate.value}`)).json();
         spaceData.innerHTML = `
-        <div class="spaceData__container" id="spaceData__container">
+        <div class="spaceData__container ${body.classList.contains("dark") ? "grey" : null}" id="spaceData__container">
             <img class="spaceData__container__img" src="${img.hdurl}" alt="Image from NASA Picture Of The Day API"/>
             <div class="card_details">
                 <div>
