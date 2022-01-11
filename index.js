@@ -2,12 +2,12 @@ const spaceData = document.getElementById("spaceData");
 
 async function getImages() {
     spaceData.innerHTML =
-        `<div class="loader">
+        `<div class="loader" id="loader">
             <div class="sun"></div>
             <div class="orbit orbitA"><div class="planet planetA"></div></div>
             <div class="orbit orbitB"><div class="planet planetB"></div></div>
             <div class="orbit orbitC"><div class="planet planetC"></div></div>
-        </div>`
+         </div>`
     const source = await (await fetch(`https://api.nasa.gov/planetary/apod?api_key=OCbAbDXICtYgGu3b2fbgmqZFJ4eP1Vff6GgQzq38&count=10`)).json();
 
     source.map(function(d) {
@@ -41,6 +41,7 @@ toggle.addEventListener("click", darkMode);
 
 function darkMode() {
     body.classList.toggle("dark");
+    loader.classList.toggle("dark");
     for (let i = 0; i < spaceData__container.length; i++) {
         spaceData__container[i].classList.toggle("grey");
     }
