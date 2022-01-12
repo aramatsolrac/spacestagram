@@ -8,7 +8,11 @@ async function getImages() {
             <div class="orbit orbitB"><div class="planet planetB"></div></div>
             <div class="orbit orbitC"><div class="planet planetC"></div></div>
          </div>`
-    const source = await (await fetch(`https://api.nasa.gov/planetary/apod?api_key=OCbAbDXICtYgGu3b2fbgmqZFJ4eP1Vff6GgQzq38&count=10`)).json();
+    const source = await (
+            await fetch(`https://api.nasa.gov/planetary/apod?api_key=OCbAbDXICtYgGu3b2fbgmqZFJ4eP1Vff6GgQzq38&count=10`)).json()
+        .catch(() => {
+            alert(`Error trying to fetch the API. Please, refresh the page.`);
+        });
 
     source.map(function(d) {
         spaceData.innerHTML +=
@@ -113,7 +117,11 @@ async function findPic() {
                 <div class="orbit orbitB"><div class="planet planetB"></div></div>
                 <div class="orbit orbitC"><div class="planet planetC"></div></div>
             </div>`
-        const img = await (await fetch(`https://api.nasa.gov/planetary/apod?api_key=OCbAbDXICtYgGu3b2fbgmqZFJ4eP1Vff6GgQzq38&date=${inputDate.value}`)).json();
+        const img = await (await fetch(`https://api.nasa.gov/planetary/apod?api_key=OCbAbDXICtYgGu3b2fbgmqZFJ4eP1Vff6GgQzq38&date=${inputDate.value}`)).json()
+            .catch(() => {
+                alert(`Error trying to fetch the API. Please, refresh the page.`);
+            });
+
         spaceData.innerHTML = `
         <div class="spaceData__container ${body.classList.contains("dark") ? "grey" : null}" id="spaceData__container">
             <img class="spaceData__container__img" src="${img.hdurl}" alt="Image from NASA Picture Of The Day API"/>
@@ -127,7 +135,8 @@ async function findPic() {
                 </button>
             <div>
         </div>`
+        inputDate.value = '';
     } else {
-        alert("Please wait for this image.");
+        alert("Please, wait for this image.");
     }
 };
