@@ -58,9 +58,9 @@ toggle.addEventListener("click", changeLogo);
 function changeLogo() {
     const logo = document.getElementById("logo").src;
     if (logo.indexOf('dark.svg') != -1) {
-        document.getElementById('logo').src = './images/light.svg';
+        document.getElementById('logo').src = './images/icons/light.svg';
     } else {
-        document.getElementById('logo').src = './images/dark.svg';
+        document.getElementById('logo').src = './images/icons/dark.svg';
     }
 }
 

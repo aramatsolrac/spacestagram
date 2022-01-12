@@ -11,7 +11,6 @@ It's an app that gets images from [NASA'S Astronomy Picture Of The Day (APOD)](h
 - [Technologies](#built-with)
 - [Installing](#installing)
 - [Live](#live)
-- [Demo](#demo)
 - [Screenshot](#screenshot)
 - [Author](#author)
 
@@ -24,8 +23,6 @@ It's an app that gets images from [NASA'S Astronomy Picture Of The Day (APOD)](h
 - Like an image
 - Unlike an image
 
-
-
 ### Features
 
 - User can like or dislike an image
@@ -35,8 +32,6 @@ It's an app that gets images from [NASA'S Astronomy Picture Of The Day (APOD)](h
 - User can search an image by a specific date
 - Responsive design
 
-
-
 ### Technologies
 
 - Semantic HTML5 markup
@@ -44,7 +39,6 @@ It's an app that gets images from [NASA'S Astronomy Picture Of The Day (APOD)](h
 - Flexbox
 - JavaScript
 - NASA API
-
 
 ### Installing
 
@@ -56,37 +50,39 @@ It's an app that gets images from [NASA'S Astronomy Picture Of The Day (APOD)](h
 
 - [Spacestagram](https://aramatsolrac.github.io/spacestagram/)
 
-### Demo
-
-
-
 ### Screenshots
 
 <details>
 <summary>Light Mode</summary>
 
+##### Responsive
+![](./images/screenshots/light-responsive.png)
+
 ##### Desktop
-![](./images/light-desktop.png)
+![](./images/screenshots/light-desktop.png)
 
 ##### Tablet
-![](./images/light-tablet.png)
+![](./images/screenshots/light-tablet.png)
 
 ##### Mobile
-![](./images/light-mobile.png)
+![](./images/screenshots/light-mobile.png)
 
 </details>
 
 <details>
 <summary>Dark Mode</summary>
 
+##### Responsive
+![](./images/screenshots/dark-responsive.png)
+
 ##### Desktop
-![](./images/dark-desktop.png)
+![](./images/screenshots/dark-desktop.png)
 
 ##### Tablet
-![](./images/dark-tablet.png)
+![](./images/screenshots/dark-tablet.png)
 
 ##### Mobile
-![](./images/dark-mobile.png)
+![](./images/screenshots/dark-mobile.png)
 
 </details>
 
