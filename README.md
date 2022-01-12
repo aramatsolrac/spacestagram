@@ -55,7 +55,11 @@ It's an app that gets images from [NASA'S Astronomy Picture Of The Day (APOD)](h
 <details>
 <summary>Light Mode</summary>
 
+<<<<<<< HEAD
 ##### Responsive
+=======
+#### Responsive
+>>>>>>> b6280d1dd11821d72fddba26f957a75a0d853475
 ![](./images/screenshots/light-responsive.png)
 
 ##### Desktop
@@ -72,7 +76,11 @@ It's an app that gets images from [NASA'S Astronomy Picture Of The Day (APOD)](h
 <details>
 <summary>Dark Mode</summary>
 
+<<<<<<< HEAD
 ##### Responsive
+=======
+#### Responsive
+>>>>>>> b6280d1dd11821d72fddba26f957a75a0d853475
 ![](./images/screenshots/dark-responsive.png)
 
 ##### Desktop
