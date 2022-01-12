@@ -126,8 +126,6 @@ label::after {
     border-radius: .5rem;
     background-color: var(--light);
     color: var(--lightGrey);
-    appearance: none;
-    -webkit-appearance: none;
 }
 
 .input:focus {
@@ -461,20 +459,20 @@ input {
     }
 }
 
-@media screen and (min-width: 0px) and (max-width: 437px) {
+@media screen and (min-width: 0px) and (max-width: 1024px) {
     .loader {
-        margin-top: 100%;
+        margin-top: 70%;
     }
 }
 
-@media screen and (min-width: 436px) and (max-width: 1024px) {
+@media screen and (min-width: 1025px) and (max-width: 1024px) {
     .loader {
-        margin-top: 80%;
+        margin-top: 60%;
     }
 }
 
 @media screen and (min-width: 1025px) {
     .loader {
-        margin-top: 30%
+        margin-top: 50%;
     }
 }

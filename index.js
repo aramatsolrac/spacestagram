@@ -106,6 +106,13 @@ today = yyyy + '-' + mm + '-' + dd;
 
 async function findPic() {
     if (today >= inputDate.value) {
+        spaceData.innerHTML =
+            `<div class="loader" id="loader">
+                <div class="sun"></div>
+                <div class="orbit orbitA"><div class="planet planetA"></div></div>
+                <div class="orbit orbitB"><div class="planet planetB"></div></div>
+                <div class="orbit orbitC"><div class="planet planetC"></div></div>
+            </div>`
         const img = await (await fetch(`https://api.nasa.gov/planetary/apod?api_key=OCbAbDXICtYgGu3b2fbgmqZFJ4eP1Vff6GgQzq38&date=${inputDate.value}`)).json();
         spaceData.innerHTML = `
         <div class="spaceData__container ${body.classList.contains("dark") ? "grey" : null}" id="spaceData__container">
