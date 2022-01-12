@@ -461,7 +461,7 @@ input {
 
 @media screen and (min-width: 0px) and (max-width: 1024px) {
     .loader {
-        margin-top: 70%;
+        margin-top: 80%;
     }
 }
 
@@ -473,6 +473,6 @@ input {
 
 @media screen and (min-width: 1025px) {
     .loader {
-        margin-top: 50%;
+        margin-top: 40%;
     }
 }
