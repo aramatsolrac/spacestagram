@@ -1,6 +1,7 @@
 # Spacestagram
 
-It's an app that gets images from [NASA'S Astronomy Picture Of The Day (APOD) API](https://api.nasa.gov/).
+
+It's an app that gets images from [NASA'S Astronomy Picture Of The Day (APOD)](https://api.nasa.gov/#apod) API.
 
 
 ## Table of contents
@@ -8,36 +9,55 @@ It's an app that gets images from [NASA'S Astronomy Picture Of The Day (APOD) AP
 - [The challenge](#the-challenge)
 - [Features](#features)
 - [Technologies](#built-with)
+- [Installing](#installing)
 - [Live](#live)
+- [Demo](#demo)
 - [Screenshot](#screenshot)
 - [Author](#author)
-
 
 ## Overview
 
 ### The Challenge
+
 - Fetch data from one of NASA’s APIs and display the resulting images
 - Display descriptive data for each image (for example: title, date, description, etc.)
 - Like an image
 - Unlike an image
 
+
+
 ### Features
+
 - User can like or dislike an image
-- User can toggle to dark light mode
-- Loading page shows as site is fetching data
+- User can toggle to the dark or light mode
+- Loading page shows as the site is fetching data
 - Display 10 random images
-- User can search an image by specific date
+- User can search an image by a specific date
 - Responsive design
 
+
+
 ### Technologies
+
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
 - JavaScript
 - NASA API
 
+
+### Installing
+
+- Download the Repository
+- Open `index.html` on a web browser (*Best support on Google Chrome*)
+
+
 ### Live
+
 - [Spacestagram](https://aramatsolrac.github.io/spacestagram/)
+
+### Demo
+
 
 
 ### Screenshots
@@ -45,32 +65,35 @@ It's an app that gets images from [NASA'S Astronomy Picture Of The Day (APOD) AP
 <details>
 <summary>Light Mode</summary>
 
-<!-- ##### Desktop
+##### Desktop
 ![](./images/light-desktop.png)
 
 ##### Tablet
 ![](./images/light-tablet.png)
 
 ##### Mobile
-![](./images/light-mobile.png) -->
+![](./images/light-mobile.png)
+
 </details>
+
 <details>
 <summary>Dark Mode</summary>
 
 ##### Desktop
-<!-- ![](./images/dark-desktop.png)
+![](./images/dark-desktop.png)
 
 ##### Tablet
 ![](./images/dark-tablet.png)
 
 ##### Mobile
-![](./images/dark-mobile.png) -->
+![](./images/dark-mobile.png)
 
 </details>
-
 
 ### Author
 
 - Linkedin - [Tamara Carlos](https://www.linkedin.com/in/tamaracarlos/)
 - Twitter - [@aramatsolrac](https://twitter.com/aramatsolrac)
+
+---
 
