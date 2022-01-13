@@ -48,7 +48,6 @@ body {
 
 header {
     display: flex;
-    /* margin: 0 1rem; */
     width: 100%;
 }
 
@@ -347,23 +346,23 @@ input {
 /* loading page */
 
 .loader {
-    background-color: inherit;
     height: 100%;
     width: 100%;
     position: fixed;
+    background-color: inherit;
 }
 
 .sun {
-    background: var(--sun);
     height: 3.125rem;
     width: 3.125rem;
-    border-radius: 50%;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     margin: auto;
+    border-radius: 50%;
+    background: var(--sun);
 }
 
 .planet {
@@ -397,15 +396,15 @@ input {
 }
 
 .orbit {
-    background: transparent;
-    border-radius: 50%;
-    border: 0.063rem solid var(--dark);
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     margin: auto;
+    background: transparent;
+    border-radius: 50%;
+    border: 0.063rem solid var(--dark);
 }
 
 .orbitA {
@@ -459,13 +458,13 @@ input {
     }
 }
 
-@media screen and (min-width: 0px) and (max-width: 1024px) {
+@media screen and (min-width: 0px) and (max-width: 437px) {
     .loader {
         margin-top: 80%;
     }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1024px) {
+@media screen and (min-width: 438px) and (max-width: 1024px) {
     .loader {
         margin-top: 60%;
     }
