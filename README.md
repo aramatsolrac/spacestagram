@@ -48,7 +48,7 @@ It's an app that gets images from [NASA'S Astronomy Picture Of The Day (APOD)](h
 
 ### Live
 
-- [Spacestagram](https://aramatsolrac.github.io/spacestagram/)
+- <a href="https://aramatsolrac.github.io/spacestagram/" target="_blank">Spacestagram</a>
 
 ### Screenshots
 
