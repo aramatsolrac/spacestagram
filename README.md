@@ -8,10 +8,10 @@ It's an app that gets images from [NASA'S Astronomy Picture Of The Day (APOD)](h
 
 - [The challenge](#the-challenge)
 - [Features](#features)
-- [Technologies](#built-with)
+- [Technologies](#technologies)
 - [Installing](#installing)
 - [Live](#live)
-- [Screenshot](#screenshot)
+- [Screenshots](#screenshots)
 - [Author](#author)
 
 ## Overview
