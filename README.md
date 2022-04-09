@@ -91,5 +91,4 @@ It's an app that gets images from [NASA'S Astronomy Picture Of The Day (APOD)](h
 - Linkedin - [Tamara Carlos](https://www.linkedin.com/in/tamaracarlos/)
 - Twitter - [@aramatsolrac](https://twitter.com/aramatsolrac)
 
----
 
